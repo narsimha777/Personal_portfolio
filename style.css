@@ -1,0 +1,478 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #74C2EE;
+    max-width: 100vw;
+}
+
+header{
+    position: fixed;
+    background-color: whitesmoke;
+    opacity: 0.5;
+    height: 80px;
+    width: 100%;
+    z-index: 10;
+}
+
+header #nav{
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    cursor: default;
+}
+
+header li{
+    display: inline;
+    padding: 10px;
+    font-size: 18px;
+}
+
+body{
+    background-image: url(./img/morning-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 55vh;
+}
+
+.mountain, .name, .info, .sun, .rav1, .rav2{
+    position: absolute;
+}
+
+.mountain{
+    width: 100%;
+    height: 105vh;
+    overflow: visible;
+    float: left;
+}
+
+.name{
+    padding-top: 80px;
+    padding-left: 50px;
+    font-style: italic;
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.container-1{
+    width: 100%;
+    height: 98vh;
+    position: relative;
+}
+
+.info{
+    float: left;
+    width: 30%;
+    padding-top: 180px;
+    padding-left: 60px;
+}
+
+.rav1{
+    padding-left: 600px;
+    padding-top: 50px;
+}
+
+.rav2{
+    padding-top: 60px;
+    padding-left: 500px;
+    rotate: 30deg;
+}
+
+.sun{
+    padding-left: 70%;
+    padding-top: 80px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Set a background color */
+  body {
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .journey{
+    /* background-image: url(img/ug.jpg); */
+    background-color: #74C2EE;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+
+  .journey-headline{
+    font-size: 64px;
+    font-family: cursive;
+    color: black;
+    font-weight: 1000;
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing: 0%;
+  }
+
+  .proj{
+    position: relative;
+  }
+
+  .proj-headline, .border1, .projhead, .info1, .banking-logo{
+    position: absolute; 
+  }
+
+  .border2, .projhead2, .info2, .logo2{
+    position: absolute;
+  }
+
+  .proj-headline{
+    font-size: 32px;
+    font-family: Inknut Antiqua;
+    font-weight: 1000;
+    letter-spacing: 0%;
+    padding-left: 20px;
+    padding-bottom: 100px;
+  }
+
+  .border1{
+    position: absolute;
+    margin: 0;
+    width: 600px;
+    z-index: 1;
+    height: 1000px;
+    padding-top: 80px;
+  }
+
+  .projhead{
+    font-style: Irish Grover;
+    padding: 80px;
+    padding-left: 90px;
+  }
+
+  .info1{
+    width: 25%;
+    padding-left: 120px;
+    padding-top: 150px;
+  }
+
+  .proj1container{
+    padding: 30px;
+  }
+
+  .banking-logo{
+    padding-left: 50%;
+    position: absolute;
+    z-index: 2;
+    padding-top: 100px;
+  }
+
+  .border2{
+    margin: 0;
+    width: 300px;
+    height: 1400px;
+    padding-top: 600px;
+    padding-left: 52%;
+    width: 80%;
+  }
+
+  .projhead2{
+    font-style: Irish Grover;
+    padding: 80px;
+    padding-left: 55%;
+    padding-top: 600px;
+  }
+
+  .info2{
+    width: 80%;
+    padding: 80px;
+    padding-left: 58%;
+    padding-top: 670px;
+  }
+
+  .proj2container{
+    padding: 30px;
+    right: 100%;
+  }
+
+  .logo2{
+    padding-top: 550px;
+    padding-left: 50px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .proj3container{
+    padding-top: 500px;
+    position: absolute;
+  }
+
+  .border3{
+    position: absolute;
+  }
+
+  .border3{
+    margin: 0;
+    width: 100px;
+    height: 1400px;
+    padding-top: 600px;
+  }
+
+  .proj3{
+    padding-top: 1000px;
+  }
+
+  .skills{
+    padding-top: 550px;
+  }
+
+  .shead{
+    padding-left: 20px;
+    font-family: Inknut Antiqua;
+  }
+
+  .sset{
+    border: 3px solid black;
+    border-radius:2rem;
+    padding: 30px;
+    margin: 20px;
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 300px;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
+    position: absolute;
+   }
+
+.skill{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+  }
+
+  .skill{
+    transform: translate3d(0, 0, 0);
+    transition: 0.5s ease-in-out transform, 0.2s ease-in-out opacity;
+  }
+
+  .skill:hover{
+    transform: translate3d(0, -3rem, 0);
+  }
+
+  .skill-container{
+    position: relative;
+  }
+
+  .js{
+    opacity: 0;
+  }
+
+  .js:hover{
+    opacity: 1;
+  }
+
+  .contact{
+    padding-top: 400px;
+    padding-left: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-family: Inter;
+  }
+
+  .cset{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    margin-left: 35%;
+    padding-bottom: 20px;
+  }
+
+  .whtsp{
+    height: 50px;
+  }
+
+  .llin{
+    height: 50px;
+  }
+
+  .github{
+    height: 50px;
+  }
+
+  .mail{
+    height: 50px;
+  }
+
+  .cnt{
+    scale: 1;
+    transition: 0.3s ease-in-out scale;
+  }
+
+  .cnt:hover{
+    scale: 1.5;
+  }
+
+  a {
+    text-decoration: none; 
+    color: inherit;    
+    cursor: default;        
+    background: none;       
+    border: none;           
+  }
+
+  a:hover{
+    opacity: 1;
+  }
+
+  .banking-logo{
+    scale: 1;
+    transition: 0.3s ease-in-out scale;
+    transform-origin: right;
+  }
+
+  .logo2{
+    scale: 1;
+    transition: 0.3s ease-in-out scale;
+    transform-origin: left;
+  }
+
+  .logo2:hover{
+    scale: 1.2;
+  }
+
+  .banking-logo:hover{
+    scale: 1.2;
+  }
