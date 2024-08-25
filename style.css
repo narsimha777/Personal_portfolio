@@ -476,3 +476,7 @@ body{
   .banking-logo:hover{
     scale: 1.2;
   }
+
+  #nav li:hover{
+    color: #FF9F55;
+  }
